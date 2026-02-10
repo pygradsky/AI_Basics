@@ -29,9 +29,8 @@ class Vector:
         return res_angle
 
 
-
 vector1 = Vector(5, 3, 1)
-vector2 = Vector(5, 3, 1)
+vector2 = Vector()
 
 print(vector1.length())
 print(vector1.difference(vector2.x, vector2.y, vector2.z))

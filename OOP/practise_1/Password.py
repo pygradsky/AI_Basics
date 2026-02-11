@@ -30,6 +30,6 @@ class Password:
                 safety_psw += random.choice(self.ASCII_LOWERCASE + self.ASCII_UPPERCASE + self.DIGITS)
 
 
-user_psw = Password("Vangok2000")
+user_psw = Password("qwerty123456789")
 print(user_psw.psw)
 print(user_psw.generate_safety_password())

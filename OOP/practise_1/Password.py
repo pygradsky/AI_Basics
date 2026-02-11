@@ -14,22 +14,29 @@ class Password:
             self.psw = user_password
 
     def check_password(self, psw):
-        if len(psw) >= 10 \
-                and (psw.strip(self.ASCII_LOWERCASE)) \
-                and (psw.strip(self.ASCII_UPPERCASE)) \
-                and (psw.strip(self.DIGITS)):
-            return True
-        return False
+        if len(psw) < 10:
+            return False
+        
+        has_lower = any(c in self.ASCII_LOWERCASE for c in psw)
+        has_upper = any(c in self.ASCII_UPPERCASE for c in psw)
+        has_digit = any(c in self.DIGITS for c in psw)
+        
+        return has_lower and has_upper and has_digit
 
     def generate_safety_password(self):
-        safety_psw = ""
-        while True:
-            if self.check_password(safety_psw):
-                return safety_psw
-            else:
-                safety_psw += random.choice(self.ASCII_LOWERCASE + self.ASCII_UPPERCASE + self.DIGITS)
+        characters = self.ASCII_LOWERCASE + self.ASCII_UPPERCASE + self.DIGITS
+        
+        lower = random.choice(self.ASCII_LOWERCASE)
+        upper = random.choice(self.ASCII_UPPERCASE)
+        digit = random.choice(self.DIGITS)
+        
+        remaining = ''.join(random.choice(characters) for _ in range(7))
+        
+        password_chars = list(lower + upper + digit + remaining)
+        random.shuffle(password_chars)
+        
+        return ''.join(password_chars)
 
 
 user_psw = Password("qwerty123456789")
 print(user_psw.psw)
-print(user_psw.generate_safety_password())

@@ -35,3 +35,4 @@ vector2 = Vector()
 print(vector1.length())
 print(vector1.difference(vector2.x, vector2.y, vector2.z))
 print(vector1.angle(vector2.x, vector2.y, vector2.z))
+

@@ -1,5 +1,5 @@
 class Product:
-    def init(self, name, price, delivery):
+    def __init__(self, name, price, delivery):
         self.name = name
         self.price = price
         self.delivery = delivery
@@ -12,25 +12,25 @@ class Product:
 
 
 class Food(Product):
-    def init(self, name, price, delivery, weight):
-        super().init(name, price, delivery)
+    def __init__(self, name, price, delivery, weight):
+        super().__init__(name, price, delivery)
         self.weight = weight
 
 
 class Electronics(Product):
-    def init(self, name, price, delivery, warranty):
-        super().init(name, price, delivery)
+    def __init__(self, name, price, delivery, warranty):
+        super().__init__(name, price, delivery)
         self.warranty = warranty
 
 
 class Clothes(Product):
-    def init(self, name, price, delivery, size):
-        super().init(name, price, delivery)
+    def __init__(self, name, price, delivery, size):
+        super().__init__(name, price, delivery)
         self.size = size
 
 
 class Cart:
-    def init(self):
+    def __init__(self):
         self.products = []
 
     def add(self, product):
@@ -59,4 +59,3 @@ cart.add(p2)
 cart.add(p3)
 
 cart.show()
-    

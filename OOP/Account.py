@@ -1,5 +1,5 @@
 class Account:
-    def init(self, owner, number, percent, open_date, balance):
+    def __init__(self, owner, number, percent, open_date, balance):
         self.owner = owner
         self.number = number
         self.percent = percent

@@ -2,7 +2,7 @@ import math
 
 
 class Figure:
-    def init(self, x, y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
@@ -13,8 +13,8 @@ class Figure:
 
 
 class Circle(Figure):
-    def init(self, x, y, r):
-        super().init(x, y)
+    def __init__(self, x, y, r):
+        super().__init__(x, y)
         self.r = r
 
     def resize(self, new_r):
@@ -27,8 +27,8 @@ class Circle(Figure):
 
 
 class Square(Figure):
-    def init(self, x, y, a):
-        super().init(x, y)
+    def __init__(self, x, y, a):
+        super().__init__(x, y)
         self.a = a
 
     def resize(self, new_a):
@@ -41,8 +41,8 @@ class Square(Figure):
 
 
 class Rectangle(Figure):
-    def init(self, x, y, a, b):
-        super().init(x, y)
+    def __init__(self, x, y, a, b):
+        super().__init__(x, y)
         self.a = a
         self.b = b
 

@@ -2,12 +2,14 @@ import math
 
 
 class KvadratnoeUravnenie:
-    def init(self, a, b, c):
+    def __init__(self, a, b, c):
         self.a = a
         self.b = b
         self.c = c
+
     def print_koeff(self):
         print(f"a = {self.a}, b = {self.b}, c = {self.c}")
+
     def reshit(self):
         D = self.b ** 2 - 4 * self.a * self.c
         print(f"Дискриминант D = {D}")

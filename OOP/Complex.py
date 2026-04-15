@@ -1,5 +1,5 @@
 class ComplexNumber:
-    def init(self, real, imag):
+    def __init__(self, real, imag):
         self.real = real      
         self.imag = imag
          

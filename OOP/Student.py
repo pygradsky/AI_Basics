@@ -77,22 +77,10 @@ student3 = Student(3, "Brown", "Michael", "Smith", "03.03.2002", "789 Oak St", "
 
 list_of_students = [student1, student2, student3]
 
-# a)
-
 faculty_input = input("Введите название факультета: ")
 students_in_faculty = [student for student in list_of_students if student.get_faculty() == faculty_input]
 print(f"Студенты факультета {faculty_input}: {students_in_faculty}")
 
-
-# b)
 course_input = input("Введите номер курса: ")
 students_in_faculty_and_course = [student for student in list_of_students if student.get_faculty() == faculty_input and student.get_course() == int(course_input)]
 print(f"Студенты факультета {faculty_input} и курса {course_input}: {students_in_faculty_and_course}")
-
-
-# c)
-# -
-
-
-# d)
-# -
